@@ -1,4 +1,5 @@
 import java.util.Calendar;
+
 public class Aluno {
 
     private String codigo;
@@ -6,7 +7,6 @@ public class Aluno {
     private String nomeApelido;
     private int anoNascimento;
     private Turma turma;
-
 
     public Aluno() {
         this.codigo = "";
@@ -16,7 +16,6 @@ public class Aluno {
         this.turma = new Turma();
     }
 
-
     public Aluno(String codigo, String nomeProprio, String nomeApelido, int anoNascimento, Turma turma) {
         this.codigo = codigo;
         this.nomeProprio = nomeProprio;
@@ -24,7 +23,6 @@ public class Aluno {
         this.anoNascimento = anoNascimento;
         this.turma = turma;
     }
-
 
     public String getCodigo() {
         return codigo;
@@ -65,7 +63,6 @@ public class Aluno {
     public void setTurma(Turma turma) {
         this.turma = turma;
     }
-
 
     public String getNomeCompleto() {
         return nomeProprio + " " + nomeApelido;

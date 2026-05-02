@@ -6,15 +6,12 @@ public class Professor {
     private int anoNascimento;
     private String area;
 
-
     public Professor() {
-
         this.numero = 0;
         this.nomeProprio = "";
         this.nomeApelido = "";
         this.anoNascimento = 0;
         this.area = "";
-
     }
 
     public Professor(int numero, String nomeProprio, String nomeApelido, int anoNascimento, String area) {
@@ -60,14 +57,22 @@ public class Professor {
     public String getArea() {
         return area;
     }
-    
+
     public void setArea(String area) {
         this.area = area;
     }
 
-    public String getNomeCompleto(){
-        return nomeProprio + " " + nomeApelido;
+    @Override
+    public String toString() {
+        return "Professor [numero=" + numero + ", nomeProprio=" + nomeProprio + ", nomeApelido=" + nomeApelido
+                + ", anoNascimento=" + anoNascimento + ", area=" + area + "]";
     }
 
+    public String getInfoProfessor() {
+        return "----INFORMAÇÃO-DA-POFESSOR----\n\n" +
+                "Nome do Professor: " + nomeProprio.toUpperCase() + nomeApelido.toUpperCase() +
+                "\nAno de Nascimento: " + anoNascimento +
+                "\nGraduação: " + area.toUpperCase();
+    }
 
 }

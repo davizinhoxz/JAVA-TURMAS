@@ -5,14 +5,11 @@ public class Turma {
     private int anoInicio;
     private int anoFim;
 
-
     public Turma() {
-
         this.codigo = "";
         this.nomeCurso = "";
         this.anoInicio = 0;
         this.anoFim = 0;
-
     }
 
     public Turma(String codigo, String nomeCurso, int anoInicio, int anoFim) {
@@ -54,12 +51,18 @@ public class Turma {
         this.anoFim = anoFim;
     }
 
-    public String getInfoTurma(String cod, String curso, int anoInicio1, int anoFim1 ) {
-        return "-----INFORMAÇÕES-DA-TURMA-----\n\n" + 
-        "Codigo da turma: " + cod.toUpperCase() +
-        "\nNome do Curso: " + curso.toUpperCase() +
-        "\nAno de Inicio: " + anoInicio1 +
-        "\nAno de Fim: " + anoFim1;
+    @Override
+    public String toString() {
+        return "Turma [codigo=" + codigo + ", nomeCurso=" + nomeCurso + ", anoInicio=" + anoInicio + ", anoFim="
+                + anoFim + "]";
+    }
+
+    public String getInfoTurma() {
+        return "----INFORMAÇÃO-DA-TURMA----\n\n" +
+                "Código da turma: " + codigo.toUpperCase() +
+                "\nNome de Curso: " + nomeCurso.toUpperCase() +
+                "\nAno de Inicio: " + anoInicio +
+                "\nAo de Fim: " + anoFim;
     }
 
 }
